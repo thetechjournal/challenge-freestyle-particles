@@ -1,0 +1,78 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background: black;
+}
+canvas {
+    background: black;
+    
+}
+
+.buttons {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width:100vw;
+    text-align: center;
+}
+.button {
+    position: relative;
+    width: 300px;
+    height: 100px;
+    margin: 10px;
+    display: inline-block;
+    border-radius: 50px;
+    transition: 0.5s;
+    background: transparent;
+    border: none;
+}
+.button::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    width: 100%;
+    height: 100%;
+    background: black;
+    transition: 0.8s;
+    line-height: 100px;
+    font-size: 50px;
+    font-weight: 900;
+    color: white;
+    border-radius: 50px;
+    border: 5px solid white;
+}
+.button:hover:before {
+    background: rgb(80, 79, 79);
+    color: black;
+    border-radius: 50px;
+    border: 5px solid gray;
+
+}
+
+.button:nth-child(1)::before {
+    content: 'Circle';
+    color: rgb(237, 126, 205);
+}
+
+.button:nth-child(2)::before {
+    content: 'Square';
+    color: rgb(198, 245, 137);
+}
+.button:nth-child(3)::before {
+    content: 'Ember';
+    color: rgb(222, 84, 22);
+}
+
+.created {
+    color: white;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  .created a {
+    color: rgb(198, 245, 137);
+  }
